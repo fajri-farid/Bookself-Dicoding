@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/de991fd127.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body class="flex flex-col h-screen justify-between">
+    <header>
+      <a href="">
+        <h1
+          class="flex items-center justify-center text-xl font-semibold text-white bg-primary p-2"
+        >
+          <img src="assets/book.png" alt="" class="w-[4rem] mr-2" /> Data Buku
+        </h1></a
+      >
+    </header>
+
+    <main class="px-4 sm:px-6 md:px-10 lg:px-[8rem] py-10">
+      <div class="flex justify-between items-center">
+        <div class="relative flex-grow">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="cari bukumu disini...."
+            class="w-full pl-4 pr-4 py-2 sm:py-3 rounded border-4 border-primary focus:outline-none focus:border-[#1F5579]"
+          />
+          <i
+            class="fa-solid fa-magnifying-glass absolute top-1/2 transform -translate-y-1/2 right-5 text-[#1F618D]"
+          ></i>
+        </div>
+        <div>
+          <a href="tambah-buku.html" class="w-auto">
+            <button
+              class="bg-primary text-white px-6 py-3 text-[0.6rem] md:text-lg sm:py-3 sm:px-10 ml-4 md:ml-10 rounded-lg"
+            >
+              add data
+            </button></a
+          >
+        </div>
+      </div>
+
+      <div id="bookList">
+        <h2 class="text-2xl font-semibold">Sudah Dibaca</h2>
+        <div
+          id="sudahDibaca"
+          class="mb-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 laptop:grid-cols-5 desktop:grid-cols-6 justify-normal md:justify-start"
+        ></div>
+
+        <h2 class="text-2xl font-semibold">Belum Dibaca</h2>
+        <div
+          id="belumDibaca"
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 laptop:grid-cols-5 desktop:grid-cols-6 justify-normal md:justify-start"
+        ></div>
+      </div>
+
+      <div id="notFound"></div>
+    </main>
+
+    <div class="h-[30rem]"></div>
+
+    <footer>
+      <h1
+        class="flex items-center justify-center text-md text-white bg-primary p-4"
+      >
+        made with ❤️
+      </h1>
+    </footer>
+
+    <script src="script/getBuku.js"></script>
+  </body>
+</html>

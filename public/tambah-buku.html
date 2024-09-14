@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/de991fd127.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Tambah Bukumu</title>
+  </head>
+  <body class="flex flex-col h-screen justify-between">
+    <header>
+      <a href="index.html">
+        <h1
+          class="flex items-center justify-center text-xl font-semibold text-white bg-primary p-2"
+        >
+          <img src="assets/book.png" alt="" class="w-[4rem] mr-2" /> Data Buku
+        </h1></a
+      >
+    </header>
+
+    <main class="px-6 lg:px-[8rem] py-10">
+      <h1 class="mb-4 bg-pink text-center text-2xl font-bold">
+        masukkan data bukumu
+      </h1>
+
+      <div>
+        <form id="formBuku" class="add flex flex-col gap-[1rem]">
+          <input type="text" placeholder="judul bukumu" id="judul" />
+          <div>
+            <label class="mb-4">gambar bukumu</label>
+            <div class="flex justify-center">
+              <img
+                id="preview"
+                src="#"
+                alt="Pratinjau Gambar"
+                style="display: none"
+                class="max-w[30rem] h-[25rem]"
+              />
+            </div>
+            <input
+              type="file"
+              accept="image/*"
+              class="w-full"
+              id="gambar_buku"
+              onchange="previewImage(this)"
+            />
+          </div>
+
+          <textarea
+            class="w-full h-32 px-4 py-2 border-2 border-gray-300 overflow-auto resize-none focus:outline-none"
+            placeholder="Sinopsis bukumu"
+            id="sinopsis"
+          ></textarea>
+          <input type="text" id="author" placeholder="author bukumu" />
+          <input type="number" id="year" placeholder="tahun rilis bukumu" />
+          <div class="border-2 p-4">
+            <p class="mb-4">genre:</p>
+            <ul
+              class="list-none grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+              id="genre"
+            >
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="genre"
+                    value="self-improvement"
+                  />
+                  self-improvement</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="novel" />
+                  novel</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="technology" />
+                  technology</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="pendidikan" />
+                  pendidikan</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="romance" />
+                  romance</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="biografi" />
+                  biografi</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="fiksi" />
+                  fiksi</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="non-fiksi" />
+                  non-fiksi</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="sejarah" />
+                  sejarah</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="misteri" />
+                  misteri</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="genre"
+                    value="science fiction"
+                  />
+                  science fiction</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="fantasi" />
+                  fantasi</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="horor" />
+                  horor</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genre" value="kesehatan" />
+                  kesehatan</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <select id="status" class="border-2 p-2 focus:outline-none">
+            <option value="belum dibaca" id="belum_dibaca">belum dibaca</option>
+            <option value="sudah dibaca" id="sudah_dibaca">sudah dibaca</option>
+          </select>
+
+          <button
+            type="button"
+            onclick="simpanBuku()"
+            class="text-lg rounded-lg p-4 bg-[#1f1f1f1f] hover:bg-[#0909091f]"
+          >
+            simpan bukumu
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <h1
+        class="flex items-center justify-center text-md text-white bg-primary p-4"
+      >
+        made with ❤️
+      </h1>
+    </footer>
+
+    <script src="script/addBuku.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@latest/src/toastify.min.js"></script>
+  </body>
+</html>

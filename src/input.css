@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-roboto;
+}
+
+.add input {
+  @apply p-2 border-2 border-gray-300 focus:outline-none;
+}
+
+.rating input {
+  @apply hidden;
+}
+
+
+option {
+  @apply p-4;
+}
+
+.book-container img {
+  @apply lg:w-[20rem] lg:h-[20rem] md:w-[10rem] md:h-[15rem]  h-[18rem] w-[15rem];
+}
+
+
+#bookList {
+  @apply mt-4 md:mt-10;
+}
+
+
+.book-container {
+  @apply m-2 p-2 mb-4 desktop:w-[14rem] laptop2:w-[13rem] laptop3:w-[12rem] laptop:w-[10rem] border md:w-auto w-auto md:hover:scale-105 flex justify-center md:justify-normal md:hover:shadow-lg;
+}
+
+.book-container p {
+  @apply lg:text-lg text-sm;
+}
+
+.not-found-image {
+  @apply flex justify-center items-center;
+}
+
+#notFound {
+  @apply flex justify-center items-center w-full;
+}
+
+#notFound img {
+  @apply w-[20rem] md:w-[30rem];
+}
+
+
+#detailBuku p {
+  @apply text-xl md:text-2xl;
+}
